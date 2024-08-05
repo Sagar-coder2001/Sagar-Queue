@@ -1,0 +1,28 @@
+
+.dashboard-container{
+    width: 600px;
+    border: 2px solid;
+    height: 600px;
+    background-color: rgb(192, 202, 244);
+    border-radius: 50px 0px 0px 0px;
+}
+.dashboard-container .abc{
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+.dashboard{
+    width: 90%;
+    height: 300px;
+    text-align: center;
+    margin: 80px auto 30px;
+    background-color: aliceblue;
+}
+/* .dashboardimg{
+    margin: 8px 0px;
+} */
+.dashboardimg img{
+    margin-top: 10px;
+    width: 300px;
+}
+
