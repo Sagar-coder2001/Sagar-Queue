@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import './LoginFrontPage.css'
 
 const LoginFrontPage = () => {
@@ -8,13 +8,16 @@ const LoginFrontPage = () => {
     const OpenLogin = () => {
         navigate('/login');
     }
-
   return (
     <>
-       <div className="container">
+       <div className="front-container">
             <div className="screen">
                 <div className="screen__content">
-                  <h2></h2><br></br>
+                  <div style={{paddingTop :'100px', paddingLeft : '50px'}}>
+                    <h1>Hii..</h1>
+                    <h2>Wlocome</h2>
+                  </div>
+               
                     <div className="social-login">
                         <div className="login__field" style={{width:'100px', position :'absolute', bottom :'10px', right :'10px' }}>
                         <button onClick={OpenLogin} className='loginsubmit'>Next</button>

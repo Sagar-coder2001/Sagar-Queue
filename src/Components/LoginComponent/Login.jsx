@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faLock, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faUsers, faLock } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Login = () => {
@@ -13,8 +13,16 @@ const Login = () => {
     });
     const [submitted, setSubmitted] = useState(false);
     const [showModal, setShowModal] = useState(false); // State to control modal visibility
-    const [queueId, setQueueId] = useState(null); // State to store the queue ID
+    const [queueIds, setQueueIds] = useState([]); // State to store the queue IDs array
     const navigate = useNavigate();
+
+    useEffect(() => {
+        // Load the queueIds array from local storage
+        const storedQueueIds = localStorage.getItem('queueIds');
+        if (storedQueueIds) {
+            setQueueIds(JSON.parse(storedQueueIds));
+        }
+    }, []);
 
     const saveDetails = (e) => {
         e.preventDefault();
@@ -26,13 +34,10 @@ const Login = () => {
             alert("Please Enter The Valid Mobile Number");
             return false;
         } else {
-            let newQueueId;
-            if (queueId === null) {
-                newQueueId = 1; // If queueId is null, start with 1
-            } else {
-                newQueueId = queueId + 1; // Increment the queueId
-            }
-            setQueueId(newQueueId);
+            const newQueueId = queueIds.length ? Math.max(...queueIds) + 1 : 1; // Generate new queue ID
+            const updatedQueueIds = [...queueIds, newQueueId]; // Add new queue ID to the array
+            setQueueIds(updatedQueueIds);
+            localStorage.setItem('queueIds', JSON.stringify(updatedQueueIds)); // Save the updated queueIds array to local storage
             setuserdetails({
                 username: '',
                 mobile: '',
@@ -85,7 +90,7 @@ const Login = () => {
                             />
                         </div>
                         <div className="login__field">
-                            <FontAwesomeIcon icon={faUser} className="login__icon" />
+                            <FontAwesomeIcon icon={faUsers} className="login__icon" />
                             <input
                                 type="number"
                                 name="number"
@@ -97,8 +102,8 @@ const Login = () => {
                                 placeholder='No Of People'
                             />
                         </div>
-                        <div className="login__field" style={{width:'250px', position :'absolute', bottom :'140px'}}>
-                        <button type='submit' className='loginsubmit'>Add Customer</button>
+                        <div className="login__field" style={{ width: '250px', position: 'absolute', bottom: '140px' }}>
+                            <button type='submit' className='loginsubmit'>Add Customer</button>
                         </div>
                     </form>
                     <div className="social-login">

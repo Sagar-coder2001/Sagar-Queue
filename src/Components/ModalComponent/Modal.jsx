@@ -5,7 +5,7 @@ import './Modal.css';
 const Modal = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { queueId } = location.state || {}; // Access the queueId from the state
+  const { queueId } = location.state || {}; 
 
   const handleConfirm = () => {
     navigate('/dashboard');
