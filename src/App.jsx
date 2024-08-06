@@ -28,9 +28,7 @@ const App = () => {
           <Modal />
         } />
         <Route path="/dashboard" element={
-          <div className='dashboard-container'>
             <Dashboard />
-          </div>
         } />
       </Routes>
     </Router>

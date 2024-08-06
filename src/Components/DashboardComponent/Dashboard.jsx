@@ -15,6 +15,11 @@ const Dashboard = () => {
         <div className="queueimg">
           <img src={queimg} alt="" />
         </div>
+        <div className="game-container">
+          <div className="game">
+            
+          </div>
+        </div>
       </div>
     </div>
     </div>

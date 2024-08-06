@@ -3,25 +3,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .dashboard-container{
-    width: 100%;
+    width: 500px;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(236, 236, 236);
+    overflow: hidden;
 }
 .dashboard{
     width: 500px;
-    height: 85vh;
-    background-color: rgb(111, 165, 183);
     padding: 10px;
+    height: 100vh;
+    overflow: auto;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
-
 .main{
-    width: 97%;
+    width: 100%;
+    height: 100vh;
     margin: 0px auto;
     background-color:  white ;
-    box-shadow: 0px 0px 10px black
+    box-shadow: 0px 0px 10px black;
+    border-radius: 6px;
+    position: relative;
 }
 .nav{
     padding: 8px;
@@ -29,16 +36,19 @@
     justify-content: space-between;
 }
 .queueimg{
-    margin-top: 30px;
+    margin-top: 100px;
     background-color: rgb(232, 248, 243);
     padding: 10px;
-    margin: 6px;
     border-radius: 8px;
 }
 .queueimg img{
     width: 300px;
     height: auto;
 }
+.game-container{
+    position: absolute;
+    bottom: 10px ;
+}
 
 
 
@@ -46,11 +56,9 @@
 
 
 
-
-@media screen and (max-width : 530px) {
+ @media screen and (max-width : 530px) {
     .dashboard{
         width: 490px;
-        height: 85vh;
         padding: 10px;
 
     }
@@ -58,25 +66,36 @@
 }
 @media screen and (max-width : 500px) {
     .dashboard{
-        width: 430px;
-        height: 85vh;
+        width: 450px;
         padding: 10px;
     }
     
 }
 @media screen and (max-width : 440px) {
     .dashboard{
-        width: 390px;
-        height: 85vh;
+        width: 400px;
         padding: 10px;
     }
     
 }
 @media screen and (max-width : 400px) {
     .dashboard{
-        width: 350px;
-        height: 85vh;
+        width: 370px;
         padding: 10px;
     }
     
-}
+} 
+@media screen and (max-width : 360px) {
+    .dashboard{
+        width: 340px;
+        padding: 10px;
+    }
+    
+} 
+@media screen and (max-width : 330px) {
+    .dashboard{
+        width: 300px;
+        padding: 10px;
+    }
+    
+} 
