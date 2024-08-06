@@ -8,6 +8,8 @@ import { increment } from '../Features/queueSlice';
 import { useDispatch , useSelector } from 'react-redux';
 
 const Login = () => {
+    const [animationClass, setAnimationClass] = useState('');
+
     const [userdetails, setuserdetails] = useState({
         username: '',
         mobile: '',
@@ -27,6 +29,10 @@ const Login = () => {
         }
     }, []);
 
+    useEffect(() => {
+        setAnimationClass('fade-in'); // Change to 'slide-in' for sliding effect
+    }, []);
+
     const saveDetails = (e) => {
         e.preventDefault();
         if (userdetails.username === '' || userdetails.mobile === '' || userdetails.number === '') {
@@ -40,6 +46,7 @@ const Login = () => {
             const newQueueId = queueIds.length ? Math.max(...queueIds) + 1 : 1; // Generate new queue ID
             const updatedQueueIds = [...queueIds, newQueueId]; // Add new queue ID to the array
             setQueueIds(updatedQueueIds);
+            console.log(queueIds);
             localStorage.setItem('queueIds', JSON.stringify(updatedQueueIds)); // Save the updated queueIds array to local storage
             setuserdetails({
                 username: '',
@@ -49,7 +56,7 @@ const Login = () => {
             setSubmitted(true);
             setShowModal(true);
             dispatch(increment(updatedQueueIds));
-            navigate('/modal', { state: { queueId: updatedQueueIds } }); // Pass queueId to Modal
+            navigate('/modal', { state: { queueId: newQueueId } }); // Pass queueId to Modal
             return true;
         }
     };
@@ -63,7 +70,9 @@ const Login = () => {
     };
 
     return (
-        <div className="container">
+        <>
+        <div className={`login-form ${animationClass}`}>
+        <div className="container" >
             <div className="screen">
                 <div className="screen__content">
                     <form className="login" onSubmit={saveDetails}>
@@ -133,6 +142,8 @@ const Login = () => {
                 </div>
             </div>
         </div>
+        </div>
+        </>
     );
 };
 

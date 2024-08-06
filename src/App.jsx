@@ -10,8 +10,6 @@ import Modal from './Components/ModalComponent/Modal';
 const isMobileDevice = () => {
   return /Mobi|Android/i.test(navigator.userAgent);
 };
-
-
 const App = () => {
   // if (!isMobileDevice()) {
   //   return <div>Please access this app on a mobile device.</div>;

@@ -1,21 +1,22 @@
 import React from 'react';
 import './Dashboard.css';
-// import quebgimg from '../assets/que.png'; // Ensure the correct path
+import queimg from '../DashboardComponent/que.png'
 
 const Dashboard = () => {
   return (
     <>
-    <div>
-      <div className="dashboard-container">
-        <div className='abc'>
-          <h3>Your Queue No: 1</h3>
+    <div className="dashboard-container">
+    <div className="dashboard">
+      <div className="main">
+        <div className="nav">
+          <h4>Name</h4>
+          <h4>Your Queue Id : 16</h4>
         </div>
-        <div className="dashboard">
-          <div className="dashboardimg">
-            {/* <img src={quebgimg} alt="Queue Background" /> */}
-          </div>
+        <div className="queueimg">
+          <img src={queimg} alt="" />
         </div>
       </div>
+    </div>
     </div>
     </>
   );

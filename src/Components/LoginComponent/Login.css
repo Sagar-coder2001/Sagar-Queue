@@ -177,3 +177,44 @@ body {
 .social-login__icon:hover {
     transform: scale(1.5);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Login.css */
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
