@@ -4,11 +4,10 @@ import { createSlice } from '@reduxjs/toolkit';
 const queueSlice = createSlice({
   name: 'Queue',
 
-  initialState: {queueId : null},
+  initialState:  null,
 
   reducers: {
-    increment: (state , action) => 
-    state.queueId = action.payload
+    increment: (state , action) => action.payload
   },
 });
 

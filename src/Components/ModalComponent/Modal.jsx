@@ -1,11 +1,14 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './Modal.css';
+import { useSelector } from 'react-redux';
 
 const Modal = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { queueId } = location.state || {}; 
+  const selector = useSelector(() => queueId.value)
+  console.log(selector)
 
   const handleConfirm = () => {
     navigate('/dashboard');

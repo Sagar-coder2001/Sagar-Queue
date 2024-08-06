@@ -15,7 +15,7 @@ const LoginFrontPage = () => {
                 <div className="screen__content">
                   <div style={{paddingTop :'100px', paddingLeft : '50px'}}>
                     <h1>Hii..</h1>
-                    <h2>Wlocome</h2>
+                    <h2>Wlocome</h2><h2>To Our</h2><h2>Restuarant</h2>
                   </div>
                
                     <div className="social-login">

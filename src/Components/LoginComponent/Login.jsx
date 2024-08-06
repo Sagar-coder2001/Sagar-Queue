@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faUsers, faLock } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { increment } from '../Features/queueSlice';
+import { useDispatch , useSelector } from 'react-redux';
 
 const Login = () => {
     const [userdetails, setuserdetails] = useState({
@@ -15,6 +17,7 @@ const Login = () => {
     const [showModal, setShowModal] = useState(false); // State to control modal visibility
     const [queueIds, setQueueIds] = useState([]); // State to store the queue IDs array
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     useEffect(() => {
         // Load the queueIds array from local storage
@@ -45,7 +48,8 @@ const Login = () => {
             });
             setSubmitted(true);
             setShowModal(true);
-            navigate('/modal', { state: { queueId: newQueueId } }); // Pass queueId to Modal
+            dispatch(increment(updatedQueueIds));
+            navigate('/modal', { state: { queueId: updatedQueueIds } }); // Pass queueId to Modal
             return true;
         }
     };
