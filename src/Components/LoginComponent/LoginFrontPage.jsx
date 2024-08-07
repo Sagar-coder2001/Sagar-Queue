@@ -14,10 +14,13 @@ const LoginFrontPage = () => {
             <div className="screen">
                 <div className="screen__content">
                   <div style={{paddingTop :'100px', paddingLeft : '50px'}}>
-                    <h1>Hii..</h1>
-                    <h2>Wlocome</h2><h2>To Our</h2><h2>Restuarant</h2>
+                    <div>
+                      <img src="https://img.freepik.com/free-vector/cafe-terrace-with-welcome-message_23-2147503932.jpg" alt="" />
+                    </div>
+                    <h2>Wlocome</h2>
+                    <span>To Our </span><br></br>
+                    <span>Restaurant...</span>
                   </div>
-               
                     <div className="social-login">
                         <div className="login__field" style={{width:'100px', position :'absolute', bottom :'10px', right :'10px' }}>
                         <button onClick={OpenLogin} className='loginsubmit'>Next</button>
@@ -35,5 +38,4 @@ const LoginFrontPage = () => {
     </>
   )
 }
-
 export default LoginFrontPage

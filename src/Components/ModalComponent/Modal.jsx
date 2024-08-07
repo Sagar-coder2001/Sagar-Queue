@@ -9,20 +9,18 @@ const Modal = () => {
   const { queueId } = location.state || {}; 
 
   const handleConfirm = () => {
-    navigate('/dashboard');
+    navigate('/dashboard', { state: { animation: 'fade-in'} });
   };
 
   const handleCancel = () => {
     navigate('/');
   };
 
-
-
   return (
     <>
     <div className="modal-overlay">
       <div className="modal-content">
-        <h2>Congratulations!</h2>
+        <h2><img src="https://media.istockphoto.com/id/1125716911/vector/party-popper-with-confetti.jpg?s=612x612&w=0&k=20&c=sAyofM-MQ5TL-pLyFseV9Vke_W2zyYX1btP90oGJQZE=" alt="" /> Congratulations! <img src="https://media.istockphoto.com/id/1125716911/vector/party-popper-with-confetti.jpg?s=612x612&w=0&k=20&c=sAyofM-MQ5TL-pLyFseV9Vke_W2zyYX1btP90oGJQZE=" alt="" /></h2>
         <p>Your queue ID is {queueId}</p>
         <div className="modal-actions">
           <button onClick={handleConfirm}>OK</button>

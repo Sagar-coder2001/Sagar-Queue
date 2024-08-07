@@ -1,17 +1,15 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
+} */
 .dashboard-container{
     width: 500px;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(236, 236, 236);
-    overflow: hidden;
 }
 .dashboard{
     width: 500px;
@@ -23,9 +21,8 @@
 }
 .main{
     width: 100%;
-    height: 100vh;
-    margin: 0px auto;
-    background-color:  white ;
+    min-height: 100vh;
+    background-color:  rgb(254, 247, 247) ;
     box-shadow: 0px 0px 10px black;
     border-radius: 6px;
     position: relative;
@@ -34,20 +31,72 @@
     padding: 8px;
     display: flex;
     justify-content: space-between;
+    padding-top: 20px ;
 }
-.queueimg{
-    margin-top: 100px;
+
+.queueimg {
+    display: flex;
+    width: 95%;
+    flex-wrap: nowrap;
+    margin: 100px auto 0px;
     background-color: rgb(232, 248, 243);
     padding: 10px;
     border-radius: 8px;
-}
+    overflow: hidden;
+    height: 150px; /* Adjust height as needed */
+    position: relative; /* Needed for absolute positioning of animated images */
+    object-fit: cover;
+    background-position: center;
+  }
 .queueimg img{
-    width: 300px;
+    width: 40px;
     height: auto;
+    padding: 10px;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+.animate-up {
+    transform: translateX(-150%); /* Move image upwards */
+    opacity: 0;
+    position: absolute; /* Make image float for smooth animation */
+  }
+
+.nav h4 {
+    padding: 10px;
+}
+.sandtimer h4{
+    background-color: rgb(232, 255, 255);
+    border-radius: 8px;
+}
+.nav img{
+    width: 40px;
+    height: 40px;
 }
 .game-container{
     position: absolute;
     bottom: 10px ;
+}
+.game{
+    padding: 10px;
+    width: 95%;
+    margin: 0px auto;
+    background-color: rgb(194, 251, 251);
+    border-radius: 6px;
+}
+.game h4{
+    font-size: 16px;
+    text-align: center;
+    padding: 5px 0px;
+}
+.gameicon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.game-container img{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
 }
 
 
