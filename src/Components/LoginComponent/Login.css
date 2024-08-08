@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: #ffffff;
+    background: #9d9d9d;
     font-family: 'Roboto', sans-serif;
 }
 .container {
@@ -34,7 +34,6 @@ body {
     position: relative;
     height: 100%;
 }
-
 .screen__background {
     position: absolute;
     top: 0;

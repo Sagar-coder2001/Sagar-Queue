@@ -11,7 +11,7 @@ body {
     align-items: center;
     background: #ffffff;
     font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+    overflow: auto;
 }
 .front-container {
     width: 350px;

@@ -46,7 +46,7 @@ const Login = () => {
             const newQueueId = queueIds.length ? Math.max(...queueIds) + 1 : 1; // Generate new queue ID
             const updatedQueueIds = [...queueIds, newQueueId]; // Add new queue ID to the array
             setQueueIds(updatedQueueIds);
-            console.log(queueIds);
+            // console.log(queueIds);
             localStorage.setItem('queueIds', JSON.stringify(updatedQueueIds)); // Save the updated queueIds array to local storage
             setuserdetails({
                 username: '',
@@ -55,8 +55,8 @@ const Login = () => {
             });
             setSubmitted(true);
             setShowModal(true);
-            dispatch(increment(updatedQueueIds));
-            navigate('/modal', { state: { queueId: newQueueId } }); // Pass queueId to Modal
+            dispatch(increment(newQueueId));
+            navigate('/modal'); // Pass queueId to Modal
             return true;
         }
     };
@@ -115,7 +115,7 @@ const Login = () => {
                                 placeholder='No Of People'
                             />
                         </div>
-                        <div className="login__field" style={{ width: '250px', position: 'absolute', bottom: '140px' }}>
+                        <div className="login__field" style={{ width: '250px', position: 'absolute', bottom: '130px' }}>
                             <button type='submit' className='loginsubmit'>Add Customer</button>
                         </div>
                     </form>
