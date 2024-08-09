@@ -9,7 +9,7 @@ import gameicon5 from '../DashboardComponent/game icon 5.png';
 import gameicon6 from '../DashboardComponent/game icon 6.png';
 import sandtimer from '../DashboardComponent/Sand timer.gif';
 import { useLocation } from 'react-router-dom';
-import manimage from '../DashboardComponent/man icon.png';
+import manimage from '../DashboardComponent/man.jpg';
 
 const Dashboard = () => {
   const location = useLocation();
@@ -35,7 +35,7 @@ const Dashboard = () => {
           return newImages;
         });
         setAnimate(false);
-      }, 1000); // Duration of the animation
+      }, 1000); 
     }, 10000);
 
     return () => clearInterval(interval);

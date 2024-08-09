@@ -10,7 +10,7 @@ const LoginFrontPage = () => {
     }
   return (
     <>
-       <div className="front-container">
+       {/* <div className="front-container">
             <div className="screen">
                 <div className="screen__content">
                   <div style={{paddingTop :'100px', paddingLeft : '50px'}}>
@@ -34,6 +34,25 @@ const LoginFrontPage = () => {
                     <span className="screen__background__shape screen__background__shape1"></span>
                 </div>
             </div>
+        </div> */}
+
+        <div className="sagar-container">
+          <div className="sagar">
+            <div className="sagarimg">
+              <div className="dummy">
+              <div className='welcomeimg'>
+                      <img src="https://img.freepik.com/free-vector/cafe-terrace-with-welcome-message_23-2147503932.jpg" alt="" />
+                    </div>
+                    <h2>Wlocome</h2>
+                    <span>To Our </span><br></br>
+                    <span>Restaurant...</span>
+              </div>
+              <div className="openlogin">
+              <button className='loginsubmit' onClick={OpenLogin}>Next</button>
+              </div>
+
+            </div>
+          </div>
         </div>
     </>
   )
