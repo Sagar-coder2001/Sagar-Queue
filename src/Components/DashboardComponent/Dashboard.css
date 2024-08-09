@@ -1,166 +1,134 @@
-/* *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
+}
 .dashboard-container{
-    width: 400px;
-    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 .dashboard{
-    width: 400px;
-    padding: 10px;
+    width: 100%;
+    max-width: 450px;
     height: 100vh;
     overflow: auto;
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
-}
-.main{
-    width: 100%;
-    min-height: 100vh;
-    background-color:  rgb(255, 255, 255) ;
-    box-shadow: 0px 0px 10px black;
     position: relative;
-    /* margin-top: 50px; */
+    box-shadow: 0px 0px 5px black;
+
 }
-.nav{
+.navigation{
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.queueimg {
+.sandtime p{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.sandclock img{
+    width: 50px;
+    height: 50px;
+}
+.show-queue{
+    margin-top: 50px ;
+    text-align: center;
+}
+.show-queue img{
+    width: 100px;
+    height: 50px;
+}
+.show-queue span{
+    font-size: 20px;
+  
+}
+.queue-img{
+    margin: 30px 20px 0px;
+}
+.queue-img img{
+    width: 25px;
+    text-align: center;
+}
+
+.queue-img {
     display: flex;
-    width: 95%;
-    flex-wrap: nowrap;
-    margin: 50px auto 0px;
-    background-color: rgb(232, 248, 243);
-
-    margin: 100px auto 0px;
-    padding: 10px;
-    border-radius: 8px;
     overflow: hidden;
-    height: 150px; /* Adjust height as needed */
-    position: relative; /* Needed for absolute positioning of animated images */
-    object-fit: cover;
-    background-position: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
   }
-.queueimg img{
-
-    width: 300px;
-    height: auto;
-    padding: 10px;
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-    background-color: transparent;
-}
-.animate-up {
-    transform: translateX(-150%); /* Move image upwards */
-    opacity: 0;
-    position: absolute; /* Make image float for smooth animation */
+  
+  .queue-img .queue-image {
+    flex-shrink: 0;
+    transition: transform 1s ease-in-out;
   }
+  
+  .queue-img.animate-left .queue-image:first-child {
+    animation: slideLeft 2s forwards;
+  }
+  
+  .queue-img.animate-right .queue-image:last-child {
+    animation: slideRight 2s linear;
+  }
+  
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes slideRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  
 
-.nav h4 {
-    padding: 10px;
+
+.game-queue{
+    margin-top: 30px;
 }
-.sandtimer h4{
-    border-radius: 8px;
-    color: black;
+.game-instruction{
+    text-align: center;
+    padding: 5px;
 }
-.sandtimer{
-    margin-left: 8px;
+.game-instruction h4{
+    font-size: 23px;
+    margin-bottom: 5px;
 }
-.sandtimer span{
-    font-weight: 800;
-}
-.sandtimer h5{
-    font-size: 16px;
-    margin-top: 4px;
-}
-.nav img{
-    width: 60px;
-    height: 60px;
-}
-.game-container{
+.game-icons{
     position: absolute;
-    bottom: 10px ;
+    bottom: 5%;
     text-align: center;
-}
-.game{
-    padding: 10px;
-    width: 95%;
     margin: 0px auto;
-    background-color: rgb(212, 252, 252);
-    border-radius: 6px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 1px black;
 }
-.game h4{
-    font-size: 16px;
-    text-align: center;
-    padding: 5px 0px;
+.game-icons h4{
+    font-size: 20px;
 }
-.gameicon{
+.game-icon{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
-.game-container img{
-    width: 70px;
-    height: 70px;
-    margin: 10px;
+.game-icon img{
+    width: 60px;
+    height: 60px;
+    margin: 8px;
 }
-.game button{
-    padding: 8px 10px;
-    margin-top: 6px;
-    background-color: rgb(237, 243, 238);
-    border: none;
-    outline: none;
-    font-size: 18px;
-    border-radius: 4px;
-    box-shadow: 0px 0px 4px crimson;
-}
-
-
-
-
-
-
- @media screen and (max-width : 530px) {
-    .dashboard{
-        width: 490px;
-        padding: 10px;
-
-    }
-    
-}
-@media screen and (max-width : 500px) {
-    .dashboard{
-        width: 450px;
-        padding: 10px;
-    }
-}
-@media screen and (max-width : 440px) {
-    .dashboard{
-        width: 400px;
-        padding: 10px;
-    } 
-}
-@media screen and (max-width : 400px) {
-    .dashboard{
-        width: 370px;
-        padding: 10px;
-    }  
-} 
-@media screen and (max-width : 360px) {
-    .dashboard{
-        width: 340px;
-        padding: 10px;
-    }
-} 
-@media screen and (max-width : 330px) {
-    .dashboard{
-        width: 300px;
-        padding: 10px;
-    } 
-} 
