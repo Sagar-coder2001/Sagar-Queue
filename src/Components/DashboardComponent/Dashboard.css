@@ -4,12 +4,11 @@
     box-sizing: border-box;
 } */
 .dashboard-container{
-    width: 500px;
+    width: 400px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(236, 236, 236);
 }
 .dashboard{
     width: 500px;
@@ -22,24 +21,26 @@
 .main{
     width: 100%;
     min-height: 100vh;
-    background-color:  rgb(254, 247, 247) ;
+    background-color:  rgb(255, 255, 255) ;
     box-shadow: 0px 0px 10px black;
-    border-radius: 6px;
     position: relative;
+    /* margin-top: 50px; */
 }
 .nav{
-    padding: 8px;
     display: flex;
     justify-content: space-between;
-    padding-top: 20px ;
+    align-items: center;
 }
-
 .queueimg {
     display: flex;
     width: 95%;
     flex-wrap: nowrap;
+<<<<<<< HEAD
     margin: 50px auto 0px;
     background-color: rgb(232, 248, 243);
+=======
+    margin: 100px auto 0px;
+>>>>>>> 09c1dc407942f366902ed98c51b9db882ee2bed1
     padding: 10px;
     border-radius: 8px;
     overflow: hidden;
@@ -48,7 +49,9 @@
     object-fit: cover;
     background-position: center;
   }
+
 .queueimg img{
+<<<<<<< HEAD
     width: 60px;
     height: auto;
     padding: 10px;
@@ -63,24 +66,42 @@
 
 .nav h4 {
     padding: 10px;
+=======
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    mix-blend-mode: multiply;
+>>>>>>> 09c1dc407942f366902ed98c51b9db882ee2bed1
 }
 .sandtimer h4{
-    background-color: rgb(232, 255, 255);
     border-radius: 8px;
+    color: black;
+}
+.sandtimer{
+    margin-left: 8px;
+}
+.sandtimer span{
+    font-weight: 800;
+}
+.sandtimer h5{
+    font-size: 16px;
+    margin-top: 4px;
 }
 .nav img{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 }
 .game-container{
     position: absolute;
     bottom: 10px ;
+    text-align: center;
 }
 .game{
     padding: 10px;
     width: 95%;
     margin: 0px auto;
-    background-color: rgb(194, 251, 251);
+    background-color: rgb(212, 252, 252);
     border-radius: 6px;
 }
 .game h4{
@@ -99,7 +120,16 @@
     height: 70px;
     margin: 10px;
 }
-
+.game button{
+    padding: 8px 10px;
+    margin-top: 6px;
+    background-color: rgb(237, 243, 238);
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px crimson;
+}
 
 
 
@@ -119,33 +149,28 @@
         width: 450px;
         padding: 10px;
     }
-    
 }
 @media screen and (max-width : 440px) {
     .dashboard{
         width: 400px;
         padding: 10px;
-    }
-    
+    } 
 }
 @media screen and (max-width : 400px) {
     .dashboard{
         width: 370px;
         padding: 10px;
-    }
-    
+    }  
 } 
 @media screen and (max-width : 360px) {
     .dashboard{
         width: 340px;
         padding: 10px;
     }
-    
 } 
 @media screen and (max-width : 330px) {
     .dashboard{
         width: 300px;
         padding: 10px;
-    }
-    
+    } 
 } 

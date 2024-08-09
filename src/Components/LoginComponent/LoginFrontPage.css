@@ -11,6 +11,10 @@ body {
     align-items: center;
     background: #ffffff;
     font-family: 'Roboto', sans-serif;
+<<<<<<< HEAD
+=======
+    overflow: auto;
+>>>>>>> 09c1dc407942f366902ed98c51b9db882ee2bed1
 }
 .front-container {
     width: 350px;
