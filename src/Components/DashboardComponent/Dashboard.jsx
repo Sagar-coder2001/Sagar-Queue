@@ -9,14 +9,15 @@ import gameicon5 from '../DashboardComponent/game icon 5.png'
 import gameicon6 from '../DashboardComponent/game icon 6.png'
 import sandtimer from '../DashboardComponent/Sand timer.gif'
 import { useLocation } from 'react-router-dom';
-import manimage from '../DashboardComponent/man icon.png'
 import { useSelector } from 'react-redux';
+
 
 const Dashboard = () => {
   const location = useLocation();
   const { state } = location;
   const animationClass = state?.animation || '';
   const select = useSelector((state) => state.Queue)
+  console.log(select);
 
   useEffect(() => {
     // This effect will run only once when the component mounts
@@ -24,6 +25,8 @@ const Dashboard = () => {
       document.getElementById('dashboard-root').classList.add(animationClass);
     }
   }, [animationClass]);
+
+
 
   return (
     <>

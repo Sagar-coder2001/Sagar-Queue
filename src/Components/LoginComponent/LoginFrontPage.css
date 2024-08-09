@@ -1,179 +1,61 @@
-/* Login.css */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
+.loginfront-container{
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    overflow: auto;
 }
-.front-container {
+.loginfront{
+    width: 100%;
+    max-width: 500px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .loginfrontimg{
     width: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-.screen {
-    background: linear-gradient(#ffffff, #ffffff);
+    min-height: 550px;
+    margin: auto;
+    background-image: url('../LoginComponent/sagar.png'); 
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
     position: relative;
-    height: 800px;
-    width: 100%;
-    box-shadow: 0px 0px 24px #5C5696;
+    box-shadow: 0px 0px 6px black;
 }
-.screen__content {
-    z-index: 1;
-    position: relative;
-}
-.screen__content img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: 20%;
-}
-.screen__content h2{
+.dummyy{
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    text-align: center;
+} 
+.dummyy h2{
     font-size: 35px;
-    margin-bottom: 20px;
     text-shadow: 0px 0px 2px rgb(0, 0, 0);
-}
-.screen__content span{
-    margin-top: 10px;
-    font-size: 25px;
-    font-weight: 600;
-}
-
-.screen__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-    clip-path: inset(0 0 0 0);
-}
-
-.screen__background__shape {
-    transform: rotate(45deg);
-    position: absolute;
-}
-
-.screen__background__shape1 {
-    height: 520px;
-    width: 520px;
-    background: #FFF;
-    top: -50px;
-    right: 120px;
-    border-radius: 0 72px 0 0;
-}
-
-.screen__background__shape2 {
-    height: 220px;
-    width: 220px;
-    background: #6C63AC;
-    top: -172px;
-    right: 0;
-    border-radius: 32px;
-}
-
-.screen__background__shape3 {
-    height: 540px;
-    width: 190px;
-    background: linear-gradient(270deg, #5D54A4, #6A679E);
-    top: -24px;
-    right: 0;
-    border-radius: 32px;
-}
-
-.screen__background__shape4 {
-    height: 400px;
-    width: 200px;
-    background: #7E7BB9;
-    top: 420px;
-    right: 50px;
-    border-radius: 60px;
-}
-
-.login__icon {
-    position: absolute;
-    top: 30px;
-    color: #7875B5;
-}
-
-.login__input {
-    border: none;
-    border-bottom: 2px solid #D1D1D4;
-    background: none;
-    padding: 10px;
-    padding-left: 24px;
-    font-weight: 600;
-    width: 75%;
-    transition: .2s;
-}
-
-.login__input:active,
-.login__input:focus,
-.login__input:hover {
-    outline: none;
-    border-bottom-color: #6A679E;
-}
-
-.loginsubmit{
-    font-size: 14px;
-    padding: 12px 14px;
-    border-radius: 26px;
-    border: 1px solid #D4D3E8;
-    text-transform: uppercase;
-    font-weight: 600;
-    width: 100%;
-    cursor: pointer;
-    transition: .2s;
-    background-color: white;
-    color: white;
-    outline: none;
+    margin: 10px 0px;
     
 }
-.login__submit:active,
-.login__submit:focus,
-.login__submit:hover {
-    border-color: #6A679E;
-    outline: none;
+.dummyy span{
+    font-size: 25px;
 }
-
-.button__icon {
-    font-size: 24px;
-    margin-left: auto;
-    color: #7875B5;
-}
-
-.social-login {
-    position: absolute;
-    height: 140px;
-    width: 160px;
+.welcomeimg img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     text-align: center;
-    bottom: 0;
-    right: 0;
-    color: #fff;
 }
-
-.social-icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.openlogin{
+    position: absolute;
+    bottom: 10%;
+    right: 20%;
 }
-
-.social-login__icon {
-    padding: 20px 10px;
-    color: #fff;
-    text-decoration: none;
-    text-shadow: 0px 0px 8px #7875B5;
-}
-
-.social-login__icon:hover {
-    transform: scale(1.5);
+.openlogin button{
+    padding: 4px 6px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px black;
 }
